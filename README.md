@@ -46,23 +46,14 @@ This endpoint is called by the frontend on each visit to increment and return th
 
 cloud-resume-backend/
 ├── .github/workflows/ # GitHub Actions workflow for deployment
-
 │ └── deploy.yml
-
 ├── crc-visitor-func/ # Azure Function app folder (Node.js)
-
 │ ├── src/
-
 │ │ └── functions/
-
 │ │ └── VisitorCounter.js
-
 │ ├── index.js # Function entry point
-
 │ ├── host.json # Function host config
-
 │ ├── package.json # Node.js dependencies
-
 │ └── .funcignore # Files excluded from deployment
 
 
