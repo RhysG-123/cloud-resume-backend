@@ -1,34 +1,47 @@
-bin
-obj
-csx
-.vs
-edge
-Publish
+# Build output
+bin/
+obj/
+dist/
+Publish/
 
+# Visual Studio
+.vs/
 *.user
 *.suo
 *.cscfg
 *.Cache
 project.lock.json
 
-/packages
-/TestResults
+# Test artifacts
+/TestResults/
+*.log
 
-/tools/NuGet.exe
-/App_Data
-/secrets
-/data
-.secrets
+# NuGet (if ever used)
+packages/
+tools/NuGet.exe
+
+# App data
+App_Data/
+secrets/
+data/
+.secrets/
+
+# Azure local settings
 appsettings.json
 local.settings.json
 
-node_modules
-dist
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Local python packages
+# IDE/editor folders
+.vscode/
+.idea/
+
+# Python artifacts
 .python_packages/
-
-# Python Environments
 .env
 .venv
 env/
@@ -36,13 +49,17 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-
-# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Azurite artifacts
-__blobstorage__
-__queuestorage__
+# Azurite (Azure emulator) artifacts
+__blobstorage__/
+__queuestorage__/
 __azurite_db*__.json
+
+# Clutter / duplicates / temp files
+* 2.json
+* 3.json
+*.swp
+*.bak

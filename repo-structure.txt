@@ -1,0 +1,45 @@
+.
+./deploy-function 2.sh
+./.gitignore
+./.github
+./.github/workflows
+./repo-structure.txt
+./deploy-function.sh
+./.git
+./.git/REBASE_HEAD
+./.git/ORIG_HEAD
+./.git/config
+./.git/filter-repo
+./.git/objects
+./.git/.COMMIT_EDITMSG.swp
+./.git/HEAD
+./.git/info
+./.git/logs
+./.git/description
+./.git/hooks
+./.git/refs
+./.git/index
+./.git/packed-refs
+./.git/REBASE_HEAD 2
+./.git/COMMIT_EDITMSG
+./.git/FETCH_HEAD
+./.git/rebase-merge 2
+./.github 2
+./crc-visitor-func
+./crc-visitor-func/host.json
+./crc-visitor-func/.DS_Store
+./crc-visitor-func/host 3.json
+./crc-visitor-func/node_modules
+./crc-visitor-func/.funcignore 3
+./crc-visitor-func/.funcignore
+./crc-visitor-func/host 2.json
+./crc-visitor-func/.funcignore 2
+./crc-visitor-func/package 2.json
+./crc-visitor-func/.gitignore
+./crc-visitor-func/package-lock.json
+./crc-visitor-func/package.json
+./crc-visitor-func/.vscode
+./crc-visitor-func/.gitignore 2
+./crc-visitor-func/local.settings.json
+./crc-visitor-func/crc-visitor-func
+./crc-visitor-func/src
