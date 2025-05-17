@@ -1,4 +1,4 @@
-name: Build and Deploy Java Function to Azure
+name: Build and Deploy Node.js Function to Azure
 
 on:
   push:
@@ -13,19 +13,18 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Set up Java
-        uses: actions/setup-java@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
         with:
-          distribution: 'temurin'
-          java-version: '17' # or match your local Java version
+          node-version: '22'
 
-      - name: Build with Maven
-        run: mvn clean package
-        working-directory: crc-visitor-func
+      - name: Install Dependencies
+        run: npm install
+        working-directory: ./crc-visitor-func
 
       - name: Deploy to Azure Function App
-        uses: azure/functions-action@v1
+        uses: Azure/functions-action@v1
         with:
           app-name: crc-function-app
-          package: crc-visitor-func/target/azure-functions/crc-visitor-func
+          package: ./crc-visitor-func
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
