@@ -36,7 +36,7 @@ It provides a serverless endpoint that tracks and updates resume page visits usi
 
 The live backend function is publicly accessible at:
 
-'https://crc-function-app.azurewebsites.net/api/VisitorCounter'
+https://crc-function-app.azurewebsites.net/api/VisitorCounter
 
 This endpoint is called by the frontend on each visit to increment and return the current visitor count.
 
