@@ -1,37 +1,31 @@
-name: Deploy Python Azure Function
+name: Build and Deploy Java Function to Azure
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Setup Python
-        uses: actions/setup-python@v4
+      - name: Set up Java
+        uses: actions/setup-java@v3
         with:
-          python-version: '3.11'
+          distribution: 'temurin'
+          java-version: '17' # or match your local Java version
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Zip Function App
-        run: |
-          zip -r functionapp.zip . -x "*.git*"
+      - name: Build with Maven
+        run: mvn clean package
+        working-directory: crc-visitor-func
 
       - name: Deploy to Azure Function App
-        uses: Azure/functions-action@v1
+        uses: azure/functions-action@v1
         with:
-          app-name: 'crc-function-pyglobal'
-          package: 'functionapp.zip'
+          app-name: crc-function-app
+          package: crc-visitor-func/target/azure-functions/crc-visitor-func
           publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE }}
-
