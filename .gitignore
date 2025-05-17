@@ -1,2 +1,38 @@
-.venv/
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+
+# === Azure Functions ===
+local.settings.json
 appsettings.json
+*.log
+
+# === IDE/editor folders ===
+.vscode/
+.idea/
+
+# === Python (for past cleanup + safety) ===
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.python_packages/
+
+# === macOS system files ===
+.DS_Store
+
+# === Clutter / duplicates / temp files ===
+* 2.js
+* 3.js
+* 2.json
+* 3.json
+*.bak
+*.swp
