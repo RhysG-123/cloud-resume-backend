@@ -44,18 +44,18 @@ This endpoint is called by the frontend on each visit to increment and return th
 
 ## Project Structure
 
-cloud-resume-backend/
-  .github/
-    workflows/
-      deploy.yml – GitHub Actions workflow for deployment
-  crc-visitor-func/ – Azure Function app folder (Node.js)
-    src/
-      functions/
-        VisitorCounter.js
-    index.js – Function entry point
-    host.json – Function host config
-    package.json – Node.js dependencies
-    .funcignore – Files excluded from deployment
+- cloud-resume-backend/
+  - .github/
+    - workflows/
+      - deploy.yml          # GitHub Actions workflow for deployment
+  - crc-visitor-func/        # Azure Function app folder (Node.js)
+    - src/
+      - functions/
+        - VisitorCounter.js
+    - index.js               # Function entry point
+    - host.json              # Function host config
+    - package.json           # Node.js dependencies
+    - .funcignore            # Files excluded from deployment
 
 ---
 
