@@ -33,3 +33,9 @@ jobs:
         with:
           app-name: crc-function-app
           package: ./crc-visitor-func
+
+      - name: Install Axios for Smoke Test
+        run: npm install axios
+
+      - name: Run Smoke Test
+        run: node tests/smoke-test.js
